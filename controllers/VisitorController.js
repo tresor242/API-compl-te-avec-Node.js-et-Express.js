@@ -1,4 +1,4 @@
-let visitors = []; // Stockage en mémoire
+let visitors = [];
 
 const createVisitor = (req, res) => {
     const { id, name, age, height } = req.body;

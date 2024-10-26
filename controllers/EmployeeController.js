@@ -1,4 +1,4 @@
-let employees = []; // Stockage en mémoire
+let employees = []; 
 
 const createEmployee = (req, res) => {
     const { id, name, position, department } = req.body;

@@ -1,4 +1,4 @@
-let maintenanceRecords = []; // Stockage en mémoire
+let maintenanceRecords = []; 
 
 const createMaintenance = (req, res) => {
     const { id, rideId, employeeId, date, description, status } = req.body;

@@ -1,4 +1,4 @@
-let tickets = []; // Stockage en mémoire
+let tickets = []; 
 
 const createTicket = (req, res) => {
     const { id, visitorId, type, price, purchaseDate, validUntil } = req.body;

@@ -1,9 +1,9 @@
 const Ride = require('../models/Ride');
 
 
-let rides = []; // Stocker les attractions en mémoire
+let rides = []; 
 
-// Créer une nouvelle attraction
+
 const createRide = (req, res) => {
     const { id, name, capacity, minHeight, duration, status } = req.body;
     const newRide = new Ride(id, name, capacity, minHeight, duration, status);
@@ -11,12 +11,12 @@ const createRide = (req, res) => {
     res.status(201).json(newRide);
 };
 
-// Récupérer toutes les attractions
+
 const getRides = (req, res) => {
     res.json(rides);
 };
 
-// Récupérer une attraction spécifique
+
 const getRideById = (req, res) => {
     const ride = rides.find(r => r.id === parseInt(req.params.id));
     if (ride) {
@@ -26,7 +26,7 @@ const getRideById = (req, res) => {
     }
 };
 
-// Mettre à jour une attraction
+
 const updateRide = (req, res) => {
     const { name, capacity, minHeight, duration, status } = req.body;
     const ride = rides.find(r => r.id === parseInt(req.params.id));
@@ -42,7 +42,7 @@ const updateRide = (req, res) => {
     }
 };
 
-// Supprimer une attraction
+
 const deleteRide = (req, res) => {
     rides = rides.filter(r => r.id !== parseInt(req.params.id));
     res.status(204).send();
